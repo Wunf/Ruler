@@ -3,7 +3,7 @@
 #include "mainwindow.h"
 #include "imagearea.h"
 
-MainWindow::MainWindow() : my_width(window_width), my_height(window_height)
+MainWindow::MainWindow()
 {
 	imageArea = new ImageArea;
 	setCentralWidget(imageArea);
@@ -12,6 +12,10 @@ MainWindow::MainWindow() : my_width(window_width), my_height(window_height)
 	createMenus();
 	
 	setWindowTitle("Ruler");
+	
+	my_width = imageArea->window_width;
+	my_height = imageArea->window_height;
+
 	resize(my_width, my_height);
 }
 

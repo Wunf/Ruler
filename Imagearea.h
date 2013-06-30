@@ -6,9 +6,6 @@
 #include <QPoint>
 #include <QWidget>
 
-const unsigned int window_width = 800;
-const unsigned int window_height = 600;
-
 class ImageArea : public QWidget
 {
 	Q_OBJECT
@@ -23,6 +20,11 @@ public:
 	bool isModified() const {return modified;}
 	QColor penColor() const {return myPenColor;}
 	
+	static const unsigned int window_width = 1024;
+	static const unsigned int window_height = 768;
+
+	static const unsigned int axis_width = 50;
+
 public slots:
 	void clearImage();
 
